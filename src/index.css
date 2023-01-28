@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .text-shadow {
+    text-shadow: 2px 6px 5px rgba(0, 0, 0, 0.2);
+  }
+}
+
+body {
+  font-family: Inter var, ui-sans-serif, system-ui;
+  color: white;
+  height: 100vh;
+}
+
+@layer components {
+  .gradient {
+    background: linear-gradient(to bottom, rgb(15 23 42), rgb(24 24 27));
+  }
+}

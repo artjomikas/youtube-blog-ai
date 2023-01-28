@@ -1,7 +1,12 @@
+import { BrowserRouter } from "react-router-dom";
+import Pages from "./pages/Pages";
+
 function App() {
   return (
-    <div className=""></div>
-  )
+    <BrowserRouter>
+      <Pages />
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
