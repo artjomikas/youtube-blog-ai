@@ -28,44 +28,40 @@ const InputLink = () => {
     });
   };
   return (
-    <div className="">
-      <form class="bg-gray-900 opacity-75 w-full shadow-lg rounded-lg px-8 pt-6 mt-12 pb-8 mb-4">
-        <div class="mb-4">
-          <label class="block text-blue-400 py-2 font-bold mb-2" for="url">
-            Paste YouTube link video
-          </label>
+    <form class="bg-gray-900 opacity-75  shadow-lg rounded-lg px-8 pt-6 mt-12 pb-8 mb-4 mx-8">
+      <div class="mb-4">
+        <label class="block text-blue-400 py-2 font-bold mb-2" for="url">
+          Paste YouTube link video
+        </label>
+        <input
+          class="shadow appearance-none border rounded w-full p-3 text-gray-700 leading-tight focus:ring transform transition hover:scale-105 duration-300 ease-in-out"
+          id="url"
+          type="text"
+          placeholder="www.youtube.com/watch?v=#####"
+          onChange={(e) => {
+            const link = e.target.value;
+            setUrl(link.split("=")[1]);
+          }}
+        />
+      </div>
 
-          <a onClick={() => console.log(blogText)}> CLOIIICK</a>
-          <input
-            class="shadow appearance-none border rounded w-full p-3 text-gray-700 leading-tight focus:ring transform transition hover:scale-105 duration-300 ease-in-out"
-            id="url"
-            type="text"
-            placeholder="www.youtube.com/watch?v=#####"
-            onChange={(e) => {
-              const link = e.target.value;
-              setUrl(link.split("=")[1]);
-            }}
-          />
-        </div>
-
-        <div class="flex items-center justify-between pt-4">
-          <button
-            class="bg-gradient-to-r from-blue-400 to-blue-500 hover:from-blue-500 hover:to-blue-600 text-white font-bold py-2 px-4 rounded focus:ring transform transition hover:scale-105 duration-300 ease-in-out"
-            type="button"
-            onClick={(e) => handleSubmit(e)}
-          >
-            {!loading ? (
-              "Transform"
-            ) : (
-              <div className="flex items-center">
-                <Loader />
-                <p>Loading</p>
-              </div>
-            )}
-          </button>
-        </div>
-      </form>
-    </div>
+      <div class="flex items-center justify-between pt-2">
+        <button
+          class="bg-gradient-to-r from-blue-400 to-blue-500 hover:from-blue-500 hover:to-blue-600 text-white font-bold py-2 px-4 rounded focus:ring transform transition hover:scale-105 duration-300 ease-in-out"
+          type="button"
+          onClick={(e) => handleSubmit(e)}
+        >
+          {!loading ? (
+            "Transform"
+          ) : (
+            <div className="flex items-center">
+              <Loader />
+              <p>Loading</p>
+            </div>
+          )}
+        </button>
+      </div>
+    </form>
   );
 };
 export default InputLink;

@@ -1,6 +1,6 @@
 const Hero = () => {
   return (
-    <div className="pt-32 text-center">
+    <div className="pt-32 text-center px-4">
       <h3 className="font-bold text-[40px] bg-clip-text text-transparent bg-gradient-to-r  from-green-400 to-blue-500 ">
         Turn YouTube Videos into Blog
       </h3>
