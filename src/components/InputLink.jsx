@@ -28,7 +28,7 @@ const InputLink = () => {
     });
   };
   return (
-    <form class="bg-gray-900 opacity-75  shadow-lg rounded-lg px-8 pt-6 mt-12 pb-8 mb-4 mx-8">
+    <form class="bg-gray-900 opacity-75  shadow-lg rounded-lg px-8 pt-6 mt-12 pb-8 mb-4 mx-8 z-10">
       <div class="mb-4">
         <label class="block text-blue-400 py-2 font-bold mb-2" for="url">
           Paste YouTube link video

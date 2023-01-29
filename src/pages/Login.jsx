@@ -3,10 +3,13 @@ import { FcGoogle } from "react-icons/fc";
 import { IoMdArrowRoundBack } from "react-icons/io";
 import { Link } from "react-router-dom";
 import Tooltip from "../components/Tooltip";
+import { UserAuth } from "../context/AuthContext";
 
 const Login = () => {
+  const { signInWithGithub, signInWithGoogle } = UserAuth();
+
   return (
-    <div className="relative w-full overflow-hidden font-outfit text-gray-900">
+    <div className="relative w-full overflow-hidden font-outfit text-gray-900 bg-white">
       <div className="w-1/3 gradient h-full hidden absolute top-0 left-0 md:block"></div>
 
       <div className="w-full flex min-h-screen flex-col items-center p-10 sm:justify-center md:w-2/3 xl:p-0 float-right">
@@ -30,7 +33,7 @@ const Login = () => {
           <div className="flex flex-col gap-y-6">
             {/* //TODO ADD LINK TO HREF */}
             <a
-              href=""
+              onClick={() => signInWithGoogle()}
               className="flex w-full items-center space-x-3 rounded border border-slate-200 py-3 px-3 font-medium text-slate-500 transition duration-300 hover:border-slate-300 hover:shadow"
             >
               <FcGoogle size="35" className="mr-1" />
